@@ -4,7 +4,7 @@ export default (expenses, { text, sortBy, startDate, endDate }) => {
        // console.log(text);  
         const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
         const endDateMatch = typeof endDate !== 'number' || expense.endDate <= endDate;
-        const textMatch = text && expense.description.toLowerCase().includes(text.toLowerCase());
+        const textMatch = !text || (text && expense.description.toLowerCase().includes(text.toLowerCase()));
         return startDateMatch && endDateMatch && textMatch;
     }).sort((a, b) => {
         console.log(sortBy);
