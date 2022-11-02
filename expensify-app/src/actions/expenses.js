@@ -10,8 +10,8 @@ export const editExpense = (id, updates) => ({
 
 //This is an addExpense generator used in dispatch method of store with some default values as given below
 export const addExpense = ({
-    description = '',
-    note = '',
+    description = 'default',
+    note = 'default',
     amount = 0,
     createdAt = 0
 } = {}) => ({
