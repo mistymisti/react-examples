@@ -1,12 +1,12 @@
 import moment from 'moment';
 import React from 'react';
 //filter reducer with definitions to each action Type
-const filtersReducerDefaultState = [{
+const filtersReducerDefaultState = {
      text : '', 
      sortBy: 'date', 
      startDate: moment().startOf('month'), 
      endDate: moment().endOf('month') 
-    }];
+    };
 // Filter reducer runs when a dispatch event is triggered by store
 
 export default (state = filtersReducerDefaultState, action) => {
