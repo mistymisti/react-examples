@@ -7,17 +7,17 @@ export default (state = expenseReducerDefaultState, action) => {
             return state.concat(action.expense);
         case 'REMOVE_EXPENSE':
             return [...state].filter(e => (e.id != action.expense.id));
-            case 'EDIT_EXPENSE':
-                return state.map(expense => {
-                    if(action.id == expense.id)    
-                        return {
-                            ...expense,
-                            ...action.updates   
-                        };
-                    else 
-                        return expense;
+        case 'EDIT_EXPENSE':
+            return state.map(expense => {
+                if(action.id == expense.id)    
+                    return {
+                        ...expense,
+                        ...action.updates   
+                    };
+                else 
+                    return expense;
 
-                });
+            });
         default: 
             return state;
     };        
