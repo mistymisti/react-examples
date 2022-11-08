@@ -11,7 +11,7 @@ beforeEach(() => {
 });
 
 test('should test the add expense page', () => {
-    expect(wrapper).toMatchSnapshot();    
+    expect(wrapper).toMatchSnapshot();
 });
 
 test('should test the add expense page with onSubmit handler', () => {
