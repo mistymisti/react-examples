@@ -7,6 +7,8 @@ import { setTextFilter } from './actions/filters';
 import { addExpense } from './actions/expenses';
 import getVisibleExpenses from './selectors/expenses'; 
 //import './styles/style.scss';
+import './firebase/firebase';
+import './playground/promises';
 
 const store = configureStore();
 const jsx = (
