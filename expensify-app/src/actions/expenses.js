@@ -7,7 +7,6 @@ export const editExpense = (id, updates) => ({
     updates
 });
 
-
 //This is an addExpense generator used in dispatch method of store with some default values as given below
 export const addExpense = ({
     description = 'default',
@@ -24,6 +23,17 @@ export const addExpense = ({
         createdAt
     }
 });
+
+export const startAddExpense = (expenseData = {}) => {
+    return (dispatch) => {
+        const {
+            description = 'default',
+            note = 'default',
+            amount = 0,
+            createdAt = 0
+        } = expenseData;
+    };
+};
 
 //remove expense filter action generator for each type
 export const removeExpense = ({id} = {}) => ({

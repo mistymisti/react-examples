@@ -23,6 +23,8 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
+export { firebase, database as default };
+
 // database.ref('expenses')
 //         .once('value', (snapshot) => {
 //             const expenses = [];
@@ -54,18 +56,18 @@ const database = firebase.database();
 //     console.log('error :: ', e);
 // });
 
-const deletedChange = database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+// const deletedChange = database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
 
 
-const childChanged = database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+// const childChanged = database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
 
-const childAdded = database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key, snapshot.val());
-});
+// const childAdded = database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
 
 
 // database.ref('expenses').push({
