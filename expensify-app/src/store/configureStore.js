@@ -3,7 +3,7 @@ import expenseReducers from '../reducers/expenses';
 import filtersReducer from '../reducers/filters';
 import thunk from 'redux-thunk';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSIONS_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //create a store and combine the declared reducers to apply for each store dispatch activity
 export default () => {
