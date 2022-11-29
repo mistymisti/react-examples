@@ -32,10 +32,39 @@ export const startAddExpense = (expenseData = {}) => {
     };
 };
 
-//remove expense filter action generator for each type
+// remove expense filter action generator for each type
 export const removeExpense = ({id} = {}) => ({
     type: 'REMOVE_EXPENSE',
     expense: {
         id
     }
 });
+
+// SET_EXPENSES
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+});
+
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expenses')
+        .once('value', (snapshot) => {
+            const expenses = [];
+            snapshot.forEach((childSnapShot) => {
+                    const expense = {
+                        id: childSnapShot.key,
+                        ...childSnapShot.val()
+                    };
+                    expenses.push(expense);
+            });
+            console.log('total expenses fetched :: ', expenses);
+            dispatch(setExpenses(expenses));
+        })
+        .then(() => {
+            console.log('In then clause');
+        }).catch((e) => {
+            console.log('error :: ', e);
+        });
+    };
+};
