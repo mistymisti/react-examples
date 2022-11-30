@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import database from '../firebase/firebase';
 
 //edit expense action generator
@@ -7,6 +6,14 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 });
+
+export const startEditExpense = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).update(updates).then(() => {
+            dispatch(editExpense(id, updates));
+        }); 
+    };
+};
 
 //This is an addExpense generator used in dispatch method of store with some default values as given below
 export const addExpense = (expense) => ({
@@ -39,6 +46,15 @@ export const removeExpense = ({id} = {}) => ({
         id
     }
 });
+
+export const startRemoveExpenses = ({ id } = {}) => {
+    return(dispatch) => {
+        return database.ref(`expenses/${ id }`).remove()
+            .then(() => {
+                dispatch(removeExpense({ id }));
+            });
+    }
+};
 
 // SET_EXPENSES
 export const setExpenses = (expenses) => ({
