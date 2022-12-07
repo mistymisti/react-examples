@@ -50,3 +50,14 @@ test('should run expenses with an edit expense with no data', () => {
     const result = expenseReducer(expenses, action);
     expect(result).toEqual([ ...expenses ]);
 });
+
+test('should set expenses', () => {
+    const action = {
+       type: 'SET_EXPENSES',
+        expenses: [expenses[1]]
+    };
+
+    const result = expenseReducer(expenses, action);
+    console.log(result);
+    expect(result).toEqual([expenses[1]]);
+});

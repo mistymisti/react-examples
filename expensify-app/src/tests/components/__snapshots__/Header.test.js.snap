@@ -9,7 +9,7 @@ exports[`should test the header component 1`] = `
     <NavLink
       activeClassName=""
       ariaCurrent="true"
-      to="/"
+      to="/dashboard"
     >
       Home
     </NavLink>
@@ -41,5 +41,10 @@ exports[`should test the header component 1`] = `
       Help
     </NavLink>
   </div>
+  <button
+    onClick={[Function]}
+  >
+    LogOut
+  </button>
 </header>
 `;
