@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test the expenselist case with expenses 1`] = `
+<div>
+  <ExpenseListItem
+    amount={0}
+    createdAt={0}
+    description="Gum"
+    id="1"
+    key="Gum"
+    note=""
+  />
+  <ExpenseListItem
+    amount={1000}
+    createdAt={-345600000}
+    description="Rent"
+    id="2"
+    key="Rent"
+    note=""
+  />
+  <ExpenseListItem
+    amount={109500}
+    createdAt={345600000}
+    description="test default"
+    id="3"
+    key="test default"
+    note=""
+  />
+</div>
+`;
+
+exports[`should test the expenselist case with no expenses 1`] = `
+<div>
+  <p>
+    No expenses
+  </p>
+</div>
+`;
