@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test the header component 1`] = `
+<header>
+  <h1>
+    BoilderPlate React App
+  </h1>
+  <div>
+    <NavLink
+      activeClassName=""
+      ariaCurrent="true"
+      to="/dashboard"
+    >
+      Home
+    </NavLink>
+  </div>
+  <div>
+    <NavLink
+      activeClassName=""
+      ariaCurrent="true"
+      to="/create"
+    >
+      Create
+    </NavLink>
+  </div>
+  <div>
+    <NavLink
+      activeClassName=""
+      ariaCurrent="true"
+      to="/edit"
+    >
+      Edit
+    </NavLink>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    LogOut
+  </button>
+</header>
+`;

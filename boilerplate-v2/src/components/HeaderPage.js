@@ -5,7 +5,7 @@ import { startLogOut } from '../actions/auth';
 
 export const HeaderPage = ({ startLogOut }) => (
     <header>
-        <h1>Expensify</h1>
+        <h1>BoilderPlate React App</h1>
         <div>
             <NavLink to="/dashboard" activeClassName="" >Home</NavLink>
         </div>
