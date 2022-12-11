@@ -4,7 +4,8 @@ import { startLogin } from '../actions/auth';
 
 export const LoginPage = ({ startLogin }) => (
     <div>
-            <button onClick={startLogin}>Login</button>
+        <h1>Boiler Plate App</h1>
+            <button onClick={startLogin}>Login with Google</button>
         </div>
 );
 

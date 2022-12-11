@@ -1,9 +1,7 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import ExpensifyDashboardPage from '../components/ExpensifyDashboardPage';
-import AddExpensePage from '../components/AddExpensePage';
+import { Router, Switch } from 'react-router-dom';
+import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
-import EditExpensePage from '../components/EditExpensePage';
 import LoginPage from '../components/LoginPage';
 import createHistory from 'history/createBrowserHistory';
 import PrivateRoute from './PrivateRoute';
@@ -16,9 +14,7 @@ const AppRoute = () => (
         <div>
                 <Switch>
                     <PublicRoute path="/" component={LoginPage} exact={true} />
-                    <PrivateRoute path="/dashboard" component={ExpensifyDashboardPage} />
-                    <PrivateRoute path="/create" component={AddExpensePage} />
-                    <PrivateRoute path="/edit/:id" component={EditExpensePage} />
+                    <PrivateRoute path="/dashboard" component={DashboardPage} />
                     <PublicRoute component={NotFoundPage} />
                 </Switch>
         </div>
